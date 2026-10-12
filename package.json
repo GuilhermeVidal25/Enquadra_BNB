@@ -1,0 +1,32 @@
+{
+  "name": "enquadra",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "npm run build:api && vite --host 127.0.0.1",
+    "build:api": "node scripts/build-api.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run build:api && npm run typecheck && vite build",
+    "preview": "npm run build:api && vite preview --host 127.0.0.1",
+    "check": "npm run typecheck && npm run build",
+    "format": "prettier --write src server/*.ts vite.config.ts README.md"
+  },
+  "dependencies": {
+    "jszip": "3.10.1",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "prettier": "^3.6.2",
+    "typescript": "5.9.3",
+    "vite": "8.0.13"
+  }
+}

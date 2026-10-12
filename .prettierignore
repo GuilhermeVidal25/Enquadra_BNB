@@ -1,0 +1,8 @@
+data/corpus.json
+package-lock.json
+server/engine/
+server/generated/
+public/vendor/
+dist/
+node_modules/
+.local-data/
